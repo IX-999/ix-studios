@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>IX Studios</title>
+<style>
+  :root {
+    --bg: #FFFFFF;
+    --ink: #1B1F24;
+    --muted: #59636E;
+    --line: #E6E9EC;
+    --link: #0B57D0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14181C;
+      --ink: #E6EAEE;
+      --muted: #98A2AC;
+      --line: #2A3138;
+      --link: #7CACF8;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14181C;
+    --ink: #E6EAEE;
+    --muted: #98A2AC;
+    --line: #2A3138;
+    --link: #7CACF8;
+  }
+
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  a { color: var(--link); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  :focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+
+  main { max-width: 640px; margin: 0 auto; padding: 72px 24px 64px; }
+
+  h1 {
+    font-size: 24px;
+    font-weight: 650;
+    font-family: ui-monospace, "Cascadia Code", Consolas, monospace;
+    letter-spacing: -0.01em;
+  }
+  .role { color: var(--muted); margin-top: 4px; }
+  .links { display: flex; gap: 20px; flex-wrap: wrap; margin-top: 16px; }
+
+  section { margin-top: 48px; }
+  h2 {
+    font-size: 16px;
+    font-weight: 650;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 16px;
+  }
+
+  .item { margin-top: 18px; }
+  .item:first-of-type { margin-top: 0; }
+  .item h3 { font-size: 16px; font-weight: 600; display: inline; }
+  .item .note {
+    color: var(--muted);
+    font-size: 13px;
+    margin-left: 8px;
+    font-family: ui-monospace, Consolas, monospace;
+  }
+  .item p { margin-top: 4px; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 16px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  @media (max-width: 480px) { main { padding-top: 48px; } }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>IX Studios</h1>
+    <p class="role">Bots, tools, and generative pipelines. Built for fun, shipped anyway.</p>
+    <nav class="links">
+      <a href="#">Discord</a>
+      <a href="#">YouTube</a>
+    </nav>
+  </header>
+
+  <section id="work">
+    <h2>Things I've built</h2>
+
+    <div class="item">
+      <h3>Suspension Bot</h3><span class="note">Python</span>
+      <p>A Discord bot that listens for website suspension events over HTTP and routes them into a channel as alerts. Runs entirely on free hosting.</p>
+    </div>
+
+    <div class="item">
+      <h3>AURA</h3><span class="note">ComfyUI · Python</span>
+      <p>A generative image pipeline built around ComfyUI, tuned to run locally on consumer AMD hardware. Reproducible workflows defined in code, fully synthetic output by design.</p>
+    </div>
+
+    <div class="item">
+      <h3>FACET</h3><span class="note">Web</span>
+      <p>A web app prototype taken from design mockup to working product, with a freemium paywall and an automated browser test suite behind it.</p>
+    </div>
+
+    <div class="item">
+      <h3>Content pipeline</h3><span class="note">Java · ffmpeg</span>
+      <p>An autonomous pipeline that scores and assembles video compilations end to end — vision models rank the clips, ffmpeg cuts the final edit, and uploads run as background jobs.</p>
+    </div>
+  </section>
+
+  <footer>IX Studios</footer>
+</main>
+</body>
+</html>
